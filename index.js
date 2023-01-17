@@ -65,7 +65,7 @@ function title() {
         width: 80,
         whitespaceBreak: false
     })))
-    console.log(chalk.yellow(`\n${chalk.yellow('Created By Zeeone Ofc')}\n`))
+    console.log(chalk.yellow(`\n${chalk.yellow('Created By Asif Ofc')}\n`))
 }
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
@@ -146,7 +146,7 @@ app.use(express.static(path.join(__dirname, 'views')))
     for (let kopel of celled) {
     if (kopel.isGroup == false) {
     if (kopel.status == "offer") {
-    let nomer = await haruka.sendTextWithMentions(kopel.from, `*${haruka.user.name}* tidak bisa menerima panggilan ${kopel.isVideo ? `video` : `suara`}. Maaf @${kopel.from.split('@')[0]} kamu akan diblokir. Silahkan hubungi Owner membuka blok !`)
+    let nomer = await haruka.sendTextWithMentions(kopel.from, `*${haruka.user.name}* can't receive calls ${kopel.isVideo ? `video` : `suara`}. Sorry @${kopel.from.split('@')[0]} you will be banned.  Please contact the owner to open the block !`)
     haruka.sendContact(kopel.from, setting.ownerNumber.map( i => i.split("@")[0]), nomer)
     await sleep(8000)
     await haruka.updateBlockStatus(kopel.from, "block")
@@ -246,7 +246,7 @@ app.use(express.static(path.join(__dirname, 'views')))
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await haruka.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:email@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://youtube.com/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:email@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://youtube.com/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;𝓟𝓪𝓴𝓲𝓼𝓽𝓪𝓷;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	haruka.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
