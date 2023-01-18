@@ -163,7 +163,7 @@ await  haruka.sendMessage(anu.id, buttonMessage)
     
 📛 *Name* : ${mek.pushName}
 👤 *User* : @${mek.sender.split("@")[0]}
-⏰ *Clock* : ${moment.tz('Asia/Makassar').format('HH:mm:ss')} WITA 
+⏰ *Clock* : ${moment.tz('Asia/Karachi').format('HH:mm:ss')} WITA 
 ✍️ *MessageType* : ${mek.mtype}
     `,
 				mentions: [participant],
@@ -193,7 +193,7 @@ let teks = `「 *ANTI VIEWONCE MESSAGE* 」
       
 📛 *Name* : ${m.pushName}
 👤 *User* : @${m.sender.split("@")[0]}
-⏰ *Clock* : ${moment.tz('Asia/Makassar').format('HH:mm:ss')} WITA 
+⏰ *Clock* : ${moment.tz('Asia/Karachi').format('HH:mm:ss')} WITA 
 ✍️ *MessageType* : ${m.mtype}
 💬 *Caption* : ${m.msg.caption ? m.msg.caption : "no caption"}`
 
