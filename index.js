@@ -58,7 +58,7 @@ if (global.db) global.db.data = {
 }
 
 function title() {
-    console.log(chalk.bold.green(figlet.textSync('Haruka Bot', {
+    console.log(chalk.bold.green(figlet.textSync('Ela Bot', {
         font: 'Standard',
         horizontalLayout: 'default',
         verticalLayout: 'default',
@@ -103,7 +103,7 @@ const {
          }
          return message;
       },
-        browser: ['Haruka Multi Device','Safari','1.0.0'],
+        browser: ['Ela Multi Device','Safari','1.0.0'],
         auth: state
     })
   if (haruka.user && haruka.user.id) haruka.user.jid = jidNormalizedUser(haruka.user.id)
